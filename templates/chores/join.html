@@ -1,0 +1,6 @@
+{% extends 'chores/base.html' %}
+{% block title %}Join your home{% endblock %}
+{% block content %}
+<section class="intro"><p class="eyebrow">TOGETHER / HOUSEHOLD</p><h1>Make the invisible work visible.</h1><p class="lede">A calm shared space for the things that keep your home moving.</p></section>
+<form method="post" class="panel form-grid">{% csrf_token %}<h2>Enter your household</h2>{{ household_form.as_p }}{{ partner_form.as_p }}<button type="submit">Enter dashboard</button></form>
+{% endblock %}

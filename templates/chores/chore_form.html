@@ -1,0 +1,3 @@
+{% extends 'chores/base.html' %}
+{% block title %}Add chore{% endblock %}
+{% block content %}<a class="back" href="{% url 'dashboard' %}">← Back</a><section class="intro"><p class="eyebrow">NEW CHORE</p><h1>Add to the rhythm.</h1></section><form method="post" class="panel form-grid">{% csrf_token %}{{ form.as_p }}<button type="submit">Save chore</button></form>{% endblock %}
